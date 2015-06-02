@@ -12,16 +12,9 @@
 		    $blob_list = $blobRestProxy->listBlobs("gurbetoylaritutanak");
 		    $blobs = $blob_list->getBlobs();
 
-		    foreach($blobs as $blob)
-		    {
-		        echo $blob->getName().": ".$blob->getUrl()."<br />";
-		    }
+			$randomImage = $blobs[array_rand($blobs)]; 
 
-			$randomImage = $blobs[array_rand($blobs)]; // See comments
-
-	        $randomImage = str_replace("/var/www/html", "", $randomImage);
-
-	        echo $randomImage
+	        echo $randomImage->getUrl();
 		}
 		catch(ServiceException $e){
 		    // Handle exception based on error codes and messages.
