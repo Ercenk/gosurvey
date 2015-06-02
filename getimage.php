@@ -1,5 +1,5 @@
 <?php
-		require_once 'WindowsAzure.php';
+		require_once 'pear\WindowsAzure\WindowsAzure.php';
 		use WindowsAzure\Common\ServicesBuilder;
 
 		$connectionString = 'DefaultEndpointsProtocol=https;AccountName=abacusdms;AccountKey=F6D2Y+S4L1F/uOHFapj9hEr4yuUX5wCXf/0nW2NuPdGrlV1VoSD7qMl0yet1QI7O7CX4CP+DkNKtPVLyT+IlGQ==';
