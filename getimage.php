@@ -1,15 +1,34 @@
-
-		require_once 'vendor\autoload.php';
+<?php
+		require_once 'WindowsAzure.php';
 		use WindowsAzure\Common\ServicesBuilder;
+
+		$connectionString = 'DefaultEndpointsProtocol=https;AccountName=abacusdms;AccountKey=F6D2Y+S4L1F/uOHFapj9hEr4yuUX5wCXf/0nW2NuPdGrlV1VoSD7qMl0yet1QI7O7CX4CP+DkNKtPVLyT+IlGQ==';
+		$blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
         $www_root = 'http://gurbetinoylari.azurewebsites.net';
 
-        $imagesDir = '/var/www/html/limesurvey/upload/surveys/477393/images/';
+		try {
+		    // List blobs.
+		    $blob_list = $blobRestProxy->listBlobs("gurbetoylaritutanak");
+		    $blobs = $blob_list->getBlobs();
 
-        $images = glob($imagesDir . '*.{JPG,jpeg,png,gif}', GLOB_BRACE);
+		    foreach($blobs as $blob)
+		    {
+		        echo $blob->getName().": ".$blob->getUrl()."<br />";
+		    }
 
-        $randomImage = $images[array_rand($images)]; // See comments
+			$randomImage = $blobs[array_rand($blobs)]; // See comments
 
-        $randomImage = str_replace("/var/www/html", "", $randomImage);
+	        $randomImage = str_replace("/var/www/html", "", $randomImage);
 
-        echo $randomImage
+	        echo $randomImage
+		}
+		catch(ServiceException $e){
+		    // Handle exception based on error codes and messages.
+		    // Error codes and messages are here: 
+		    // http://msdn.microsoft.com/library/azure/dd179439.aspx
+		    $code = $e->getCode();
+		    $error_message = $e->getMessage();
+		    echo $code.": ".$error_message."<br />";
+		}
+?>
