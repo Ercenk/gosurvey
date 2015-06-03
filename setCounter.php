@@ -14,11 +14,7 @@
 
         $containerName = $parts[1];
 
-        var_dump($containerName);
-
         $blobName = implode('/', array_splice($parts, 2));
-
-var_dump($blobName);
 
        	$timesSeen = 0;
 		try {
@@ -31,7 +27,7 @@ var_dump($blobName);
 				$timesSeen = intval($metadata[$key]);
 			}
 
-			$metadata[$key] = strval(++$timesseen);
+			$metadata[$key] = strval(++$timesSeen);
 
 			$blobRestProxy->setBlobMetadata($containerName, $blobName, $metadata);      
 		}
