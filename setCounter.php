@@ -11,13 +11,10 @@
         $containerName = "gurbetoylaritutanak";
 
         $blobUrl = $_GET["blob"];
+        $parts = explode("/", parse_url($blobUrl, PHP_URL_PATH));
 
-        echo $blobUrl;
+var_dump($parts);
 
-        var_dump(parse_url($blobUrl));
-var_dump(parse_url($blobUrl, PHP_URL_PATH));
-var_dump(parse_url($blobUrl, PHP_URL_QUERY));
-var_dump(parse_url($blobUrl, PHP_URL_FRAGMENT));
 
 
 
