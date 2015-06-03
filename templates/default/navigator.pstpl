@@ -7,7 +7,7 @@
             {NAVIGATOR}
         </td>
         <td class="clear-all">
-            {CLEARALL}
+            <p></p>
         </td>
     </tr>
 </table>
