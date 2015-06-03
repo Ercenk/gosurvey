@@ -15,11 +15,6 @@
         echo $blobUrl;
 
         var_dump(parse_url($blobUrl));
-var_dump(parse_url($blobUrl, PHP_URL_SCHEME));
-var_dump(parse_url($blobUrl, PHP_URL_USER));
-var_dump(parse_url($blobUrl, PHP_URL_PASS));
-var_dump(parse_url($blobUrl, PHP_URL_HOST));
-var_dump(parse_url($blobUrl, PHP_URL_PORT));
 var_dump(parse_url($blobUrl, PHP_URL_PATH));
 var_dump(parse_url($blobUrl, PHP_URL_QUERY));
 var_dump(parse_url($blobUrl, PHP_URL_FRAGMENT));
