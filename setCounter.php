@@ -12,6 +12,8 @@
 
         $blobUrl = $_GET["blob"];
 
+        echo $blobUrl;
+        
        	$timesSeen = 0;
 		try {
 		  	$blob = $blobRestProxy->getBlob($containerName, "myblob");
