@@ -2,19 +2,40 @@
 		require_once 'WindowsAzure\WindowsAzure.php';
 		use WindowsAzure\Common\ServicesBuilder;
 
-		$connectionString = 'DefaultEndpointsProtocol=http;AccountName=abacusdms;AccountKey=F6D2Y+S4L1F/uOHFapj9hEr4yuUX5wCXf/0nW2NuPdGrlV1VoSD7qMl0yet1QI7O7CX4CP+DkNKtPVLyT+IlGQ==';
+		$connectionString = getenv("CUSTOMCONNSTR_storageaccount");
+
 		$blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
         $www_root = 'http://gurbetinoylari.azurewebsites.net';
+        $containerName = "gurbetoylaritutanak";
 
 		try {
 		    // List blobs.
-		    $blob_list = $blobRestProxy->listBlobs("gurbetoylaritutanak");
+		    $blob_list = $blobRestProxy->listBlobs($containerName);
 		    $blobs = $blob_list->getBlobs();
 
-			$randomImage = $blobs[array_rand($blobs)]; 
+		    $randomImage = NULL;
+		    $timesSeen = 0;
 
-	        echo $randomImage->getUrl();
+		    do {
+		    	$randomImage = $blobs[array_rand($blobs)]; 
+
+		    	$blobName =  $randomImage->getName();
+		    	$properties = $blobRestProxy->getBlobMetadata($containerName, $blobName);
+				$metadata = $properties->getMetadata();
+				$key = "timesseen";
+				if (isset($metadata[$key])) {
+					$timesSeen = intval($metadata[$key]);
+				}
+
+		    } while ($timesSeen >= 3);
+
+			if (is_null($randomImage))
+			{
+				echo "noimage";
+			} else {
+				echo $randomImage->getUrl();
+			}       
 		}
 		catch(ServiceException $e){
 		    // Handle exception based on error codes and messages.
