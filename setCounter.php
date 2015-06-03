@@ -8,19 +8,19 @@
 		$blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
         $www_root = 'http://gurbetinoylari.azurewebsites.net';
-        $containerName = "gurbetoylaritutanak";
 
         $blobUrl = $_GET["blob"];
         $parts = explode("/", parse_url($blobUrl, PHP_URL_PATH));
 
-var_dump($parts);
+        $containerName = $parts[1];
 
+        $blobName = implode('/', array_splice($parts, 2));
 
-
+var_dump($blobName);
 
        	$timesSeen = 0;
 		try {
-		  	$blob = $blobRestProxy->getBlob($containerName, "myblob");
+		  	$blob = $blobRestProxy->getBlob($containerName, $blobName);
 
 	    	$properties = $blobRestProxy->getBlobMetadata($containerName, $blobName);
 			$metadata = $properties->getMetadata();
