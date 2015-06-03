@@ -14,6 +14,8 @@
 
         $containerName = $parts[1];
 
+        var_dump($containerName);
+
         $blobName = implode('/', array_splice($parts, 2));
 
 var_dump($blobName);
