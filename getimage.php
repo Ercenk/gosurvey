@@ -2,8 +2,8 @@
 		require_once 'WindowsAzure\WindowsAzure.php';
 		use WindowsAzure\Common\ServicesBuilder;
 
-		$connectionString = getenv("MYSQLCONNSTR_storageaccount");
-		
+		$connectionString = getenv("CUSTOMCONNSTR_storageaccount");
+
 		//$connectionString = 'DefaultEndpointsProtocol=http;AccountName=abacusdms;AccountKey=F6D2Y+S4L1F/uOHFapj9hEr4yuUX5wCXf/0nW2NuPdGrlV1VoSD7qMl0yet1QI7O7CX4CP+DkNKtPVLyT+IlGQ==';
 		$blobRestProxy = ServicesBuilder::getInstance()->createBlobService($connectionString);
 
