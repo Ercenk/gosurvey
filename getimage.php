@@ -12,7 +12,7 @@
 
 		try {
 		    // List blobs.
-		    $options = new ListBLobsOptions();
+		    $options = new ListBlobsOptions();
 		    $options->setPrefix('tutanakcanavari');
 		    $blob_list = $blobRestProxy->listBlobs($containerName, $options);
 		    $blobs = $blob_list->getBlobs();
