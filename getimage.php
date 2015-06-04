@@ -11,7 +11,9 @@
 
 		try {
 		    // List blobs.
-		    $blob_list = $blobRestProxy->listBlobs($containerName);
+		    $options = new ListBLobOptions();
+		    $options->setPrefix('tutanakcanavari');
+		    $blob_list = $blobRestProxy->listBlobs($containerName, $options);
 		    $blobs = $blob_list->getBlobs();
 
 		    $randomImage = NULL;
