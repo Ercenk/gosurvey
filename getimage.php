@@ -1,7 +1,6 @@
 <?php
 		require_once 'WindowsAzure\WindowsAzure.php';
 		use WindowsAzure\Common\ServicesBuilder;
-		use WindowsAzure\Blob\Models;
 
 		$connectionString = getenv("CUSTOMCONNSTR_storageaccount");
 
