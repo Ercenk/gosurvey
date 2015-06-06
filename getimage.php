@@ -38,7 +38,7 @@
 
 			if (is_null($randomImage))
 			{
-				echo "noimage";
+				echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
 			} else {
 				echo $randomImage->getUrl();
 			}       
