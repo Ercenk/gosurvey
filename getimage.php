@@ -44,11 +44,6 @@
 			}       
 		}
 		catch(ServiceException $e){
-		    // Handle exception based on error codes and messages.
-		    // Error codes and messages are here: 
-		    // http://msdn.microsoft.com/library/azure/dd179439.aspx
-		    $code = $e->getCode();
-		    $error_message = $e->getMessage();
-		    echo $code.": ".$error_message."<br />";
+		    echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
 		}
 ?>
