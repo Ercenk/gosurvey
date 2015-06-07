@@ -20,7 +20,7 @@
 		    $randomImage = NULL;
 		    $timesSeen = 0;
 
-		    echo count($blobs);
+		    echo $blob_list->getContainerName();
 
 		    if (count($blobs) > 0)
 	    	{
@@ -29,8 +29,7 @@
 
 			if (is_null($randomImage))
 			{
-				echo count($blobs);
-				// echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
+				echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
 			} else {
 				echo $randomImage->getUrl();
 			}       
