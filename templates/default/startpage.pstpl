@@ -6,6 +6,8 @@
 <!-- The following line includes jquery-ui.css or jquery-ui-custom.css from template dir, template.css and needed specific css file for survey -->
 {TEMPLATECSS}
 
+<link rel="stylesheet" type="text/css" href="/templates/default/guncel.css" />
+
 <!--[if lte IE 6]>
 <link rel="stylesheet" type="text/css" href="{TEMPLATEURL}ie_fix_6.css" />
 <![endif]-->
