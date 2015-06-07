@@ -18,6 +18,10 @@
 	width: 650px !important;
 	box-shadow: 0px 0px 5px black;
 }
+.group-description img.rotated {
+  width: auto !important;
+  height: 650px !important;
+}
 
 #question1{ /* e mail */
 	display: inline-block;
