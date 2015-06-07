@@ -29,7 +29,8 @@
 
 			if (is_null($randomImage))
 			{
-				echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
+				echo count($blobs);
+				// echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
 			} else {
 				echo $randomImage->getUrl();
 			}       
