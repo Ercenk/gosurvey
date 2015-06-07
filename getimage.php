@@ -20,6 +20,8 @@
 		    $randomImage = NULL;
 		    $timesSeen = 0;
 
+		    echo count($blobs);
+
 		    if (count($blobs) > 0)
 	    	{
 			  	$randomImage = $blobs[array_rand($blobs)]; 
