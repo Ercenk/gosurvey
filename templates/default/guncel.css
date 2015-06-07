@@ -1,7 +1,6 @@
-
 .innerframe{
-	width: 100% !important;
-	margin: 0px !important;
+	width: 1200px !important;
+	margin: 0 auto !important;
 }
 
 .group-name{
@@ -15,5 +14,155 @@
 }
 .group-description img{
 	width: 600px !important;
+	box-shadow: 0px 0px 5px black;
 }
+
+#question1{ /* e mail */
+	display: inline-block;
+	width: 300px;
+}
+#question2{
+	display: inline-block;
+	width: 200px;
+}
+#question3{
+	display: inline-block;
+	width: 300px;
+}
+#question4{
+	display: inline-block;
+	width: 200px;
+}
+#question5{
+	display: inline-block;
+	width: 250px;
+}
+#question6{
+	display: inline-block;
+	width: 250px;
+}
+#question7{
+	display: inline-block;
+	width: 250px;
+}
+#question8{
+	display: inline-block;
+	width: 250px;
+}
+#question9{
+	display: inline-block;
+}
+#question10{
+	display: inline-block;
+	width: 120px;
+}
+#question10 .questiontext span:nth-child(3){
+	display:none;
+}
+#question10 .questiontext span.questionhelp:before {
+	content: "AKP";
+	font-size: 2em;
+	color: black;
+	padding-left: 5px;
+}
+#question11{
+	display: inline-block;
+	width: 120px;
+}
+#question11 .questiontext span:nth-child(3){
+	display:none;
+}
+#question11 .questiontext span.questionhelp:before {
+	content: "CHP";
+	font-size: 2em;
+	color: black;
+	padding-left: 5px;
+}
+#question12{
+	display: inline-block;
+	width: 120px;
+}
+#question12 .questiontext span:nth-child(3){
+	display:none;
+}
+#question12 .questiontext span.questionhelp:before {
+	content: "MHP";
+	font-size: 2em;
+	color: black;
+	padding-left: 5px;
+}
+#question13{
+	display: inline-block;
+	width: 120px;
+}
+#question13 .questiontext span:nth-child(3){
+	display:none;
+}
+#question13 .questiontext span.questionhelp:before {
+	content: "HDP";
+	font-size: 2em;
+	color: black;
+	padding-left: 5px;
+}
+#question15{
+	display: inline-block;
+}
+#question15 .questiontext span:nth-child(3){
+	display:none;
+}
+#question15 .questiontext span.questionhelp:before {
+	content: "Diğer";
+	font-size: 2em;
+	color: black;
+	padding-left: 5px;
+}
+#question16{
+	display: inline-block;
+	width: 220px;
+}
+#question17{
+	display: inline-block;
+	width: 280px;
+}
+#question18{
+	display: inline-block;
+	width: 250px;
+}
+#question19{
+	display: inline-block;
+	width: 250px;
+}
+
+td.answer{
+	padding: 0em !important;
+}
+
+p.question{
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+/* email input */
+#answer516487X1X1{
+	width: 200px;
+	margin-right: 10px;
+}
+
+#answer516487X1X4{
+	width: 70px;
+}
+
+.question-wrapper{
+	width: auto !important;
+}
+
+td.questiontext{
+	color: rgb(102, 102, 102) !important;
+	font-family: verdana, arial, sans-serif !important;
+	font-size: 13.3333330154419px !important;
+	line-height: 20px !important;
+	padding: 0.2em 1em !important;
+}
+
+
 
