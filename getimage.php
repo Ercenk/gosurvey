@@ -20,7 +20,7 @@
 		    $randomImage = NULL;
 		    $timesSeen = 0;
 
-		    echo $blob_list->getContainerName();
+		    //echo $blob_list->getContainerName();
 
 		    if (count($blobs) > 0)
 	    	{
