@@ -59,7 +59,7 @@
 #question10 .questiontext span:nth-child(3){
 	display:none;
 }
-#question10 .questiontext span.questionhelp:before {
+#question10 .questiontext span.asterisk:after {
 	content: "AKP";
 	font-size: 2em;
 	color: black;
@@ -72,7 +72,7 @@
 #question11 .questiontext span:nth-child(3){
 	display:none;
 }
-#question11 .questiontext span.questionhelp:before {
+#question11 .questiontext span.asterisk:after {
 	content: "CHP";
 	font-size: 2em;
 	color: black;
@@ -85,7 +85,7 @@
 #question12 .questiontext span:nth-child(3){
 	display:none;
 }
-#question12 .questiontext span.questionhelp:before {
+#question12 .questiontext span.asterisk:after {
 	content: "MHP";
 	font-size: 2em;
 	color: black;
@@ -98,7 +98,7 @@
 #question13 .questiontext span:nth-child(3){
 	display:none;
 }
-#question13 .questiontext span.questionhelp:before {
+#question13 .questiontext span.asterisk:after {
 	content: "HDP";
 	font-size: 2em;
 	color: black;
@@ -110,7 +110,7 @@
 #question15 .questiontext span:nth-child(3){
 	display:none;
 }
-#question15 .questiontext span.questionhelp:before {
+#question15 .questiontext span.asterisk:after {
 	content: "Diğer";
 	font-size: 2em;
 	color: black;
