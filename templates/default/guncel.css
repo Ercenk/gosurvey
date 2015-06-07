@@ -12,6 +12,7 @@
 .group-description{
 	float: left !important;
 	width: 655px !important;
+	min-height: 650px !important;
 }
 .group-description img{
 	width: 650px !important;
