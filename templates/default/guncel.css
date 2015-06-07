@@ -13,25 +13,25 @@
 	float: left !important;
 }
 .group-description img{
-	width: 600px !important;
+	width: 650px !important;
 	box-shadow: 0px 0px 5px black;
 }
 
 #question1{ /* e mail */
 	display: inline-block;
-	width: 300px;
+	width: 250px;
 }
 #question2{
 	display: inline-block;
-	width: 200px;
+	width: 270px;
 }
 #question3{
 	display: inline-block;
-	width: 300px;
+	width: 250px;
 }
 #question4{
 	display: inline-block;
-	width: 200px;
+	width: 270px;
 }
 #question5{
 	display: inline-block;
@@ -51,6 +51,7 @@
 }
 #question9{
 	display: inline-block;
+	width: 500px;
 }
 #question10{
 	display: inline-block;
@@ -106,15 +107,6 @@
 }
 #question15{
 	display: inline-block;
-}
-#question15 .questiontext span:nth-child(3){
-	display:none;
-}
-#question15 .questiontext span.asterisk:after {
-	content: "Diğer";
-	font-size: 2em;
-	color: black;
-	padding-left: 5px;
 }
 #question16{
 	display: inline-block;
