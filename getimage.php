@@ -1,7 +1,39 @@
 <?php
 		require_once 'WindowsAzure\WindowsAzure.php';
 		use WindowsAzure\Common\ServicesBuilder;
-		use WindowsAzure\Blob\Models\ListBlobsOptions;
+        use WindowsAzure\Blob\Models\ListBlobsOptions;
+
+
+        function get_random_picture(){
+            function get_url_contents($url){
+              $crl = curl_init();
+              $timeout = 5;
+              curl_setopt ($crl, CURLOPT_URL,$url);
+              curl_setopt ($crl, CURLOPT_RETURNTRANSFER, 1);
+              curl_setopt ($crl, CURLOPT_CONNECTTIMEOUT, $timeout);
+              $ret = curl_exec($crl);
+              curl_close($crl);
+
+              return $ret;
+            }
+
+            $url = "https://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/urls.txt";
+            $html_content = get_url_contents($url);
+            $parts = explode(",", $html_content);
+
+            $counter = 0;
+            $img_url = "";
+            while($counter++ < 10){
+                $rand = rand(0, sizeof($parts));
+                $img_url = $parts[$rand];
+
+                $html_content = get_url_contents($img_url);
+                if(strlen($html_content) > 500){
+                    break;
+                }
+            }
+            return $img_url;
+        }
 
 		$connectionString = getenv("CUSTOMCONNSTR_storageaccount");
 
@@ -11,28 +43,8 @@
         $containerName = "gurbetoylaritutanak";
 
 		try {
-		    // List blobs.
-		    $options = new ListBlobsOptions();
-		    $options->setPrefix('tutanakcanavari');
-		    $blob_list = $blobRestProxy->listBlobs($containerName, $options);
-		    $blobs = $blob_list->getBlobs();
-
-		    $randomImage = NULL;
-		    $timesSeen = 0;
-
-		    //echo $blob_list->getContainerName();
-
-		    if (count($blobs) > 0)
-	    	{
-			  	$randomImage = $blobs[array_rand($blobs)]; 
-		    }
-
-			if (is_null($randomImage))
-			{
-				echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
-			} else {
-				echo $randomImage->getUrl();
-			}       
+			$randomImage = get_random_picture(); 
+            echo $randomImage;
 		}
 		catch(ServiceException $e){
 		    //echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
