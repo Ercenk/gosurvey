@@ -19,6 +19,7 @@
 
             $url = "https://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/urls.txt";
             $html_content = get_url_contents($url);
+            echo $html_content;
             $parts = explode(",", $html_content);
 
             $counter = 0;
