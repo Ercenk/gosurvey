@@ -6,6 +6,8 @@
 
         function get_random_picture(){
             function get_url_contents($url){
+              return file_get_contents($url);
+                                
               $crl = curl_init();
               $timeout = 5;
               curl_setopt ($crl, CURLOPT_URL,$url);
