@@ -27,7 +27,7 @@
             $counter = 0;
             $img_url = "";
             while($counter++ < 10){
-                $rand = rand(0, sizeof($parts));
+                $rand = rand(0, sizeof($parts) - 1);
                 $img_url = $parts[$rand];
 
                 $html_content = get_url_contents($img_url);
