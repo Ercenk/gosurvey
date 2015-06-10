@@ -50,9 +50,9 @@
             echo $randomImage;
 		}
 		catch(ServiceException $e){
-		    //echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
-		    $code = $e->getCode();
- $error_message = $e->getMessage();
- echo $code.": ".$error_message."<br />";
+		    echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
+//		    $code = $e->getCode();
+ //$error_message = $e->getMessage();
+ //echo $code.": ".$error_message."<br />";
 		}
 ?>
