@@ -1,6 +1,6 @@
 <?php
 
-return "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
+echo "http://abacusdms.blob.core.windows.net/gurbetoylaritutanakmetadata/metadata/denizbitti.jpg";
 		/*require_once 'WindowsAzure\WindowsAzure.php';
 		use WindowsAzure\Common\ServicesBuilder;
         use WindowsAzure\Blob\Models\ListBlobsOptions;
